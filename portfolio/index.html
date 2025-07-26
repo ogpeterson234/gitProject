@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="style.js"></script> -->
+    
+    <title>John Portfolio</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="#">CyBerVauLt</a></h1>
+      <!-- <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav> -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="nav-menu">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  </nav>
+
+    </header> 
+
+    <section class="hero reveal">
+      <h2>Hello, I’m John 👋</h2>
+      <p>
+        Welcome to My Personal Portfolio Website, Feel Free to Tour Around My
+        World!!
+      </p>
+    </section>
+    <section id="about" class="about reveal">
+      <h2>About Me</h2>
+      <p>
+        I’m John, a passionate web developer focused on building clean,
+        responsive websites. I love turning ideas into digital reality using
+        modern tools like HTML, CSS, JavaScript, and Django.
+      </p>
+    </section>
+
+    <section id="projects" class="projects reveal">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>
+          This personal website was built using HTML, CSS, and JavaScript to
+          showcase my work and skills.
+        </p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Django Blog App</h3>
+        <p>
+          A full-stack blog platform built with Django, featuring user login,
+          post management, and comment system.
+        </p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </section>
+
+    <section id="skills" class="skills reveal">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Django</li>
+        <li>MySQL</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xzzvrjkq" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+</script>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+  }
+</script>
+
+  </body>
+</html>
