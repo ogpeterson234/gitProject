@@ -387,4 +387,27 @@
   /* rest stays the same */
 }
 
-
+.bio-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 30px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px; /* new */
+}
+.bio-content{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bio-content h2, h3{
+  text-align: center;
+  color: goldenrod;
+  margin-top: 25px;
+}
+.bio-content p{
+  text-align: justify;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
